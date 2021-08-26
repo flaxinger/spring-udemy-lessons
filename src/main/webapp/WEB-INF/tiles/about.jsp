@@ -7,4 +7,4 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8"  %>
 
-This is the about page..
+<h1>This is the about page..</h1>
