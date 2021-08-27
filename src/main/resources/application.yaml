@@ -1,8 +1,18 @@
 server:
   port: 8082
-spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/jsps/
-      suffix: .jsp
 debug: true
+spring:
+  datasource:
+    username: springboot
+    url: jdbc:mysql://localhost:3306/springbootudemy
+    password: hello
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLInnoDBDialect
+      generate-ddl: true
+      show-sql: true
+      ddl-auto: update
+logging:
+  level:
+    org.hibernate.SQL: DEBUG

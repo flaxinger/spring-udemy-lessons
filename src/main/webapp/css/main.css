@@ -25,12 +25,19 @@
 }
 
 .card {
-    width: 60rem;
+    width: 54rem;
 }
 
 .card-header {
     background-color: #0c63e4;
     color: whitesmoke;
+}
+.latest-status.card {
+    width: 20rem;
+}
+
+.latest-status > .card-body {
+    border-color: #0c63e4;
 }
 
 textarea {
