@@ -14,3 +14,41 @@ lesson link:
     </ol>
   </p>
 </div>
+<div>
+  <h2>Tech Stack</h2>
+  <p>The technologies(frameworks, components) composing this project includes but is not ristricted to the following:
+    <ul>    
+      <li>Languages
+        <ul>
+          <li>Java</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </li>
+      <li>Front End Components
+        <ul>
+          <li>Jsp(Java Server Pages)</li>
+          <li>Jstl(Jakarta Standard Tag Library</li>
+          <li>Spring Data</li>
+          <li>Apache Tiles</li>
+          <li>Bootstrap 5.1</li>
+        </ul>
+      </li>
+      <li>Back End Components
+        <ul>
+          <li>Database
+            <ul>
+              <li>Mysql</li>
+            </ul>
+          </li>
+          <li>Framework
+            <ul>
+              <li>Spring-boot</li>
+              <li>Spring-data</li>
+            </ul>       
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </p>
+</div>
