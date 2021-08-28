@@ -11,6 +11,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <div class="row">
     <div class="col-md-8">
+
+<%--        Request statusUpdate attibute: <%= request.getAttribute("statusUpdate")%><br/>--%>
+<%--        JSP object: <%= this %><br/>--%>
+<%--        JSP class: <%= this.getClass()%><br/>--%>
+
         <div class="card">
             <div class="card-header">
                 Add a Status Update
@@ -19,7 +24,9 @@
             <div class="card-body">
 <%--                HTML4까지 유효했음 HTML5부터는 modelAttibute 사용--%>
 <%--                <form:form commandName="statusUpdate">--%>
-                    <form:form modelAttribute="statusUpdate">
+
+                <form:form modelAttribute="statusUpdate">
+<%--                    <form:input type="hidden" path="id"></form:input>--%>
                     <div class="form-group">
                         <form:textarea path="text" rows="10" cols="50" placeholder="What are you thinking today?"></form:textarea>
                     </div>
