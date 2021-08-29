@@ -52,3 +52,24 @@ lesson link:
     </ul>
   </p>
 </div>
+<div>
+  <h2>Additional Improvement</h2>
+  <p>The list below contains customizations/improvements made on the project for further completeness:
+    <ul>
+        <li>Version
+            <p>As the lecture was recorded quite some time ago, multiple components were upgraded for compatability
+                <ol>
+                    <li>Java(16.0.2)</li>
+                    <li>Bootstrap(---)</li>
+                    <li>HTML</li>
+                </ol>
+            </p>
+        </li>
+        <li>Locale settings(support of multiple languages)
+            <p>The lecture/project is solely in English and therefore does not support other languages. Although all some parts of the project was left untranslated, it was modified enough to support multiple languages via JSTL.
+            </p>
+        </li>
+    </ul>
+  </p>
+</div>
+

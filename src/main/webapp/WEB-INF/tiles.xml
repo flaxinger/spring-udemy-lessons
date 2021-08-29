@@ -2,6 +2,9 @@
 <!DOCTYPE tiles-definitions PUBLIC
         "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!--<!DOCTYPE tiles-definitions PUBLIC -->
+<!--        "-//W3C//DTD HTML 4.01 Transitional//EN" -->
+<!--        "http://www.w3.org/TR/html4/loose.dtd">-->
 <tiles-definitions>
     <definition name="app.default" template="/WEB-INF/layouts/default.jsp">
         <put-attribute name="title" value="Spring Udemy" />

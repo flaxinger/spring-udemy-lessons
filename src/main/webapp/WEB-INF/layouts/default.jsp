@@ -8,9 +8,13 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><tiles:insertAttribute name="title"/></title>
@@ -21,11 +25,13 @@
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"/>
     <link href="${contextRoot}/css/main.css" rel="stylesheet"/>
 
+
 </head>
 <body>
 
 <!-- Static navbar -->
 <nav class="navbar navbar-expand-sm navbar-dark" aria-label="Third navbar example">
+
     <div class="container-fluid">
         <a class="navbar-brand" href="${contextRoot}/">Spring Udemy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
