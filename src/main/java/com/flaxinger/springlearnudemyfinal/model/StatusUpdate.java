@@ -1,5 +1,8 @@
 package com.flaxinger.springlearnudemyfinal.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
@@ -13,6 +16,7 @@ public class StatusUpdate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Size(min=5, max=255, message = "{addstatus.text.size}")
     @Column(name = "text")
     private String text;
 
