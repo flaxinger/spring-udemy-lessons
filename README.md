@@ -29,7 +29,7 @@ lesson link:
         <ul>
           <li>Jsp(Java Server Pages)</li>
           <li>Jstl(Jakarta Standard Tag Library</li>
-          <li>Spring Data</li>
+          <li>Spring Data(spring-boot-starter-data-jpa)</li>
           <li>Apache Tiles</li>
           <li>Bootstrap 5.1</li>
         </ul>

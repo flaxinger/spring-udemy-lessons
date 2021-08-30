@@ -1,7 +1,9 @@
 package com.flaxinger.springlearnudemyfinal.model;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface StatusUpdateDao extends CrudRepository<StatusUpdate, Long> {
+//PagingAndSortingRepository inherits from CrudRepository Interface and therefore supports all that CruRepository provides
+public interface StatusUpdateDao extends PagingAndSortingRepository<StatusUpdate, Long> {
     StatusUpdate findFirstByOrderByAddedDesc();
 }
