@@ -53,6 +53,7 @@
                        aria-expanded="false">User</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown02">
                         <li><a class="dropdown-item" href="${contextRoot}/addstatus">Add Status</a></li>
+                        <li><a class="dropdown-item" href="${contextRoot}/viewstatus">View Status</a></li>
                         <%--                        <li><a class="dropdown-item" href="${contextRoot}/about">about</a></li>--%>
                     </ul>
                 </li>
