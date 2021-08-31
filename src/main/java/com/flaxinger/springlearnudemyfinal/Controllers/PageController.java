@@ -21,11 +21,16 @@ import java.util.Date;
 @Controller
 public class PageController {
 
-
+    @Autowired
+    private StatusUpdateService statusUpdateService;
 
     @RequestMapping("/")
-    public String home(){
-        return "app.homepage";
+    ModelAndView home(ModelAndView modelAndView){
+
+        StatusUpdate statusUpdate = statusUpdateService.getLatest();
+        modelAndView.getModel().put("statusUpdate", statusUpdate);
+        modelAndView.setViewName("app.homepage");
+        return modelAndView;
     }
 
     @RequestMapping("/about")

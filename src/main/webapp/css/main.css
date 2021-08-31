@@ -83,6 +83,12 @@ textarea {
     width: 10%;
 }
 
+.homepage-status{
+    text-align: center;
+    margin-top: 30px;
+    font-size: larger;
+}
+
 .pagination-num {
     margin-right: auto;
     margin-left: auto;

@@ -9,6 +9,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
+
 <div class="row">
     <fmt:setLocale value="en"/>
     <div class="col-md-8">
@@ -33,6 +35,7 @@
                     </div>
                     <div class="form-group">
                         <form:textarea path="text" rows="10" cols="50" placeholder="What are you thinking today?"></form:textarea>
+<%--                        <form:textarea path="text"></form:textarea>--%>
                     </div>
                     <div class="submit-button">
                         <input type="submit" name="submit" value="Add Status" class="btn btn-dark"/>
@@ -60,3 +63,14 @@
         </div>
     </div>
 </div>
+
+<%--<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>--%>
+<%--<script>--%>
+
+<%--    document.addEventListener('focusin', function (e) { if (e.target.closest('.tox-tinymce-aux, .moxman-window, .tam-assetmanager-root') !== null) { e.stopImmediatePropagation(); } });--%>
+<%--    tinymce.init({--%>
+<%--        selector: 'textarea'--%>
+<%--    });--%>
+
+<%--</script>--%>
+
