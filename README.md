@@ -72,4 +72,18 @@ lesson link:
     </ul>
   </p>
 </div>
+<div>
+  <h2>Issues</h2>
+  <p>The list below contains features not implemented due to framework/component issues
+    <ul>
+        <li>Version Issues
+            <ol>
+                <li>WYSIWYG editor
+                    <p>The lesson includes a WYSIWYG editor in the project. However, the example editor(Tinymce) is not compatible with Bootstrap 5; furthermore, no other editor was found as a substitution.</p>
+                </li>
+            </ol>
+        </li>
+    </ul>
+  </p>
+</div>
 

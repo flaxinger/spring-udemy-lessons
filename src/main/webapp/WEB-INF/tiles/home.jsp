@@ -6,4 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8"  %>
- Hello World Tiles! flaxinger flaxinger
+
+<div class="row">
+ <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+  <div class="homepage-status">
+   Latest Update: ${statusUpdate.text}
+  </div>
+ </div>
+</div>
+
