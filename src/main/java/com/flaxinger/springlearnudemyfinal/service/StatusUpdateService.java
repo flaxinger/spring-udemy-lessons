@@ -40,4 +40,13 @@ public class StatusUpdateService {
         return statusUpdateDao.findAll(request);
 
     }
+
+    public void delete(Long id) {
+        // In the Lecture, just delete() was used. However, in recent versions delete() requires the entity.
+        statusUpdateDao.deleteById(id);
+    }
+
+    public StatusUpdate get(Long id) {
+        return statusUpdateDao.findById(id).orElse(null);
+    }
 }

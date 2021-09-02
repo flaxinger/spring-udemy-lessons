@@ -1,5 +1,7 @@
 package com.flaxinger.springlearnudemyfinal.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -22,6 +24,9 @@ public class StatusUpdate {
 
     @Column(name = "added")
     @Temporal(TemporalType.TIMESTAMP)
+    // When date is passed by frontend, it is passed as a string and therefore you must auto format it here
+    // Format is provided in java document
+    @DateTimeFormat(pattern = "yyy/MM/dd hh:mm:ss")
     private Date added;
 
     @PrePersist

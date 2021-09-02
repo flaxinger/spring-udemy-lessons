@@ -25,6 +25,10 @@
 }
 
 .card {
+    width: 70rem;
+}
+
+.card-add-status {
     width: 54rem;
 }
 
@@ -63,16 +67,31 @@ textarea {
     color: red;
 }
 
+/*table.table  {*/
+/*    border-collapse: separate;*/
+/*}*/
 .status-list-id{
     width: 5rem;
 }
 
 .status-list-status{
-    width: 15rem;
+    width: 40rem;
 }
 
 .status-list-date {
-    width: 7rem;
+    width: 15rem;
+}
+
+.edit-btn{
+    border-color: #343a40;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.edit-btn:hover {
+    border-color: #f8f9fa;
 }
 
 .pagination{
@@ -93,3 +112,4 @@ textarea {
     margin-right: auto;
     margin-left: auto;
 }
+

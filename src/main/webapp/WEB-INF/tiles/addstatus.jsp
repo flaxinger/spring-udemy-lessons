@@ -19,7 +19,7 @@
 <%--        JSP object: <%= this %><br/>--%>
 <%--        JSP class: <%= this.getClass()%><br/>--%>
 
-        <div class="card">
+        <div class="card card-add-status">
             <div class="card-header">
                 Add a Status Update
             </div>

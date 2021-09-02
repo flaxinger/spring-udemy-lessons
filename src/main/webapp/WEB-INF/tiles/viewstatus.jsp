@@ -29,14 +29,22 @@
                         <th scope="col" class = "status-list-id">#</th>
                         <th scope="col" class = "status-list-status">Status</th>
                         <th scope="col" class = "status-list-date">Date</th>
+                        <th scope="col" class = "status-list-edit">Edit</th>
                     </tr>
                     </thead>
                     <tbody>
                         <c:forEach var="statusUpdate" items="${page.content}">
+                            <c:url var="editLink" value="/editstatus?id=${statusUpdate.id}"/>
+                            <c:url var="deleteLink" value="/deletestatus?id=${statusUpdate.id}"/>
                             <tr>
                             <th scope="row" class = "status-list-id">${statusUpdate.id}</th>
                             <td class = "status-list-status"><c:out value="${statusUpdate.text}"></c:out></td>
                             <td class = "status-list-date"><c:out value="${statusUpdate.added}"></c:out></td>
+                            <td class = "status-list-edit">
+                                <div>
+                                    <a href="${editLink}" class="btn btn-light edit-btn">edit</a> | <a onclick="return confirm('This status may not be retrieved')" href="${deleteLink}" class="btn btn-light edit-btn">delete</a>
+                                </div>
+                            </td>
                             </tr>
                         </c:forEach>
                     </tbody>
