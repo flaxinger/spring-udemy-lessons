@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 
 <html lang="en">
@@ -24,7 +25,7 @@
     <link href="${contextRoot}/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"/>
     <link href="${contextRoot}/css/main.css" rel="stylesheet"/>
-
+    <link href="${contextRoot}/css/login.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -40,23 +41,34 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample03">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                       aria-expanded="false">Basic</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="${contextRoot}/">home</a></li>
-                        <li><a class="dropdown-item" href="${contextRoot}/about">about</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown"
-                       aria-expanded="false">User</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                        <li><a class="dropdown-item" href="${contextRoot}/addstatus">Add Status</a></li>
-                        <li><a class="dropdown-item" href="${contextRoot}/viewstatus">View Status</a></li>
-                        <%--                        <li><a class="dropdown-item" href="${contextRoot}/about">about</a></li>--%>
-                    </ul>
-                </li>
+                <sec:authorize access="isAuthenticated()">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                           aria-expanded="false">Basic</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="${contextRoot}/">home</a></li>
+                            <li><a class="dropdown-item" href="${contextRoot}/about">about</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown"
+                           aria-expanded="false">User</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                            <li><a class="dropdown-item" href="${contextRoot}/addstatus">Add Status</a></li>
+                            <li><a class="dropdown-item" href="${contextRoot}/viewstatus">View Status</a></li>
+                            <%--                        <li><a class="dropdown-item" href="${contextRoot}/about">about</a></li>--%>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:$('#logoutForm').submit()">Logout</a>
+                    </li>
+                </sec:authorize>
+                <sec:authorize access="!isAuthenticated()">
+                    <li class="nav-item">
+                        <a class="nav-link" href="${contextRoot}/login">Login</a>
+                    </li>
+                </sec:authorize>
+
             </ul>
             <form>
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -76,3 +88,7 @@
 
 </body>
 </html>
+<c:url var="logoutLink" value="/logout"/>
+<form id="logoutForm" method="post" action="logoutLink">
+    <input type="hidden" name="{_csrf.parameterName}" value="$_csrf.token"/>
+</form>
