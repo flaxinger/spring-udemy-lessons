@@ -10,4 +10,14 @@ public class AuthController {
 //    String admin(){
 //        return "admin";
 //    }
+
+    @RequestMapping("/login")
+    String login(){
+        return "app.login";
+    }
+
+    @RequestMapping("/logout")
+    String logout(){
+        return "app.login";
+    }
 }

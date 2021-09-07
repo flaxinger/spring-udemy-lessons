@@ -5,7 +5,7 @@
 }
 
 .form-control {
-    margin-top: 5px;
+    margin-top: 15px;
 
 }
 
@@ -24,6 +24,10 @@
     margin-top: 20px;
 }
 
+.col-md-1, .col-md-8 {
+    position: relative;
+    float: left;
+}
 .card {
     width: 70rem;
 }
@@ -35,6 +39,7 @@
 .card-header {
     background-color: #0c63e4;
     color: whitesmoke;
+    padding-left: 25px;
 }
 .latest-status.card {
     width: 20rem;

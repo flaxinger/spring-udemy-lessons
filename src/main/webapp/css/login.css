@@ -1,0 +1,13 @@
+.login-logo {
+    width: 100%;
+    height: 100%;
+    /*margin-left: 10%;*/
+}
+
+.card-login {
+    width: 100%
+}
+
+.login-error {
+    color: red;
+}
